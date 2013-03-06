@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            HTML5 PhotoBooth
+        </title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <style>
+            div.content { margin-top: 60px; margin-bottom: 60px; border: 1px solid
+            #EEE; border-radius: 5px;} div.video, div.buttons, #photos { padding: 10px;
+            } #photos { padding-top: 0; } #video { padding: 0; margin: 0; } .brd {
+            border: 2px solid #EEE; } #canvas{ display: none; visibility: hidden; }
+            #video { margin:auto; } div#photos img{ float: left; width: 105px; height:
+            105px; margin: 5px; margin-left: 0; border: 2px solid #EEE}
+        </style>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39099602-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		      var ga = document.createElement('script');
+		      ga.type = 'text/javascript';
+		      ga.async = true;
+		      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		      var s = document.getElementsByTagName('script')[0];
+		      s.parentNode.insertBefore(ga, s);
+		  })();
+        </script>
+    </head>
+    
+    <body>
+        <header class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand app-title" href="#">HTML5 Photobooth</a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="container content">
+                <div class="row">
+                    <div class="span8">
+                        <div class="video">
+                            <video id="video" src="">
+                            </video>
+                            <canvas id="canvas">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="buttons">
+                            <p>
+                                <button id="start" class="btn btn-info btn-large btn-block">
+                                    Start
+                                </button>
+                            </p>
+                            <p>
+                                <button id="stop" class="btn btn-info btn-large btn-block">
+                                    Stop
+                                </button>
+                            </p>
+                            <p>
+                                <button id="capture" class="btn btn-info btn-large btn-block">
+                                    Capture
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="span12">
+                        <div id="photos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="webcam.js">
+                                                
+        </script>
+        <script src="script.js">
+                                                
+        </script>
+    </body>
+
+</html>
